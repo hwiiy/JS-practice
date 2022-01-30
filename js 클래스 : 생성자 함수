@@ -1,0 +1,16 @@
+function User(first, last) {
+  this.first = first;
+  this.last = last;
+}
+
+User.prototype.getFullName = function () {
+  return `${this.first} ${this.last}`;
+};
+
+const hwiy = new User("Hwiy", "Jang");
+const amy = new User("amy", "park");
+const Jimny = new User("Jimny", "Lee");
+
+console.log(hwiy.getFullName());
+console.log(amy.getFullName());
+console.log(Jimny.getFullName());
