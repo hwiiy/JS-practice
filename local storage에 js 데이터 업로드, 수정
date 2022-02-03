@@ -1,0 +1,13 @@
+const user = {
+  name: "hwiy",
+  age: 24,
+  email: ["ha5374@na", "ha5324@da"],
+};
+
+const str = localStorage.getItem("user");
+const obj = JSON.parse(str);
+obj.age = 20;
+obj.name = "giro";
+console.log(obj);
+
+localStorage.setItem("user", JSON.stringify(obj));
