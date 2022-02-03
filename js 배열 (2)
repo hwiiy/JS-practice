@@ -1,0 +1,44 @@
+// 6 .filter()
+// map과 filter의 차이!
+const numbers = [1, 2, 3, 4];
+const a = numbers.map((number) => number < 3);
+console.log(a); //true,true,false,false
+
+const b = numbers.filter((number) => number < 3);
+console.log(b); //[1,2]
+
+// 7 .find, .findIndex()
+const fruits = ["Apple", "Banana", "Cherry"];
+const c = fruits.find((fruit) => {
+  return /^B/.test(fruit);
+});
+console.log(c);
+
+const d = fruits.findIndex((fruit) => {
+  return /^C/.test(fruit);
+});
+console.log(d);
+
+// 8 .includes()
+const e = numbers.includes(3);
+console.log(e);
+
+const f = numbers.includes("hwiy");
+console.log(f);
+
+//아래 함수들은 원본이 수정됨에 주의!!
+
+// 9 .push() .unshift()
+numbers.push(5);
+numbers.unshift(0);
+console.log(numbers); //[0,1,2,3,4,5]
+
+// 10 .reverse()
+const alphbet = ["a", "b", "c"];
+console.log(alphbet.reverse());
+
+// 11 .slice()
+const num_num = [1, 2, 3, 4, 5];
+num_num.splice(1, 2);
+num_num.splice(2, 0, "b");
+console.log(num_num); //[1,4,'b',5]
