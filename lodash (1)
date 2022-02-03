@@ -1,0 +1,20 @@
+import _ from "lodash";
+
+const userA = [
+  { userId: "1", name: "Hwiy" },
+  { userId: "2", name: "Neo" },
+];
+const userB = [
+  { userId: "1", name: "Hwiy" },
+  { userId: "3", name: "Amy" },
+];
+
+const userC = userA.concat(userB);
+console.log("concat:", userC);
+
+// 1. uniqBy
+console.log("Uniqby:", _.uniqBy(userC, "userId"));
+
+// 2. unionBy
+const userD = _.unionBy(userA, userB, "userId");
+console.log("unionBy:", userD);
